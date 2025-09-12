@@ -3,99 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chebet Miriam - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Chebet Miriam | Data Scientist & AI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header h2 {
+      font-weight: 300;
+      margin: 10px 0;
+    }
+    header .btn {
+      display: inline-block;
+      margin: 15px 10px;
+      padding: 12px 24px;
+      border-radius: 25px;
+      background: #ff6b6b;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    header .btn:hover {
+      background: #ff4757;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #203a43;
+    }
+    .about p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .skill, .project {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .skill:hover, .project:hover {
+      transform: translateY(-5px);
+    }
+    .skill h3, .project h3 {
+      margin-bottom: 10px;
+      color: #0f2027;
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #203a43;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .contact a:hover {
+      background: #2c5364;
+    }
+    footer {
+      background: #203a43;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Hero Section -->
-  <section class="hero d-flex align-items-center" id="home">
-    <div class="container text-center">
-      <h1 class="mb-4 mt-3">I'm <span>CHEBET Miriam</span></h1>
-      <h2 class="mb-4">A Junior Data Scientist & AI Engineer</h2>
+  <header>
+    <h1>Chebet Miriam</h1>
+    <h2>Junior Data Scientist & AI Engineer</h2>
+    <a href="https://github.com/YOUR_GITHUB" target="_blank" class="btn">GitHub</a>
+    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="btn">LinkedIn</a>
+  </header>
 
-      <!-- Social links -->
-      <div class="social-links">
-        <a href="https://github.com/chebet24" target="_blank" class="me-3">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/chebet-miriam/" target="_blank">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
+  <!-- About -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate Junior Data Scientist and AI Engineer with a strong foundation in data analysis, 
+      machine learning, and artificial intelligence. I specialize in turning raw data into meaningful insights 
+      and developing intelligent solutions to solve real-world challenges.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>Python & Data Science</h3>
+        <p>Pandas, NumPy, Scikit-learn for data analysis and ML.</p>
+      </div>
+      <div class="skill">
+        <h3>Machine Learning</h3>
+        <p>Model building, evaluation, and deployment for predictive solutions.</p>
+      </div>
+      <div class="skill">
+        <h3>Data Visualization</h3>
+        <p>Matplotlib, Seaborn, Power BI for impactful storytelling with data.</p>
+      </div>
+      <div class="skill">
+        <h3>Databases</h3>
+        <p>SQL & NoSQL databases for structured and unstructured data.</p>
+      </div>
+      <div class="skill">
+        <h3>AI Applications</h3>
+        <p>NLP, computer vision, and API integration for AI-driven systems.</p>
       </div>
     </div>
   </section>
 
-  <!-- About Me Section -->
-  <section class="about py-5" id="about">
-    <div class="container">
-      <h2 class="mb-4 text-center">About Me</h2>
-      <p class="text-center">
-        As a Junior Data Scientist and AI Engineer, I am passionate about transforming data into actionable insights 
-        and building intelligent systems. My work focuses on machine learning, data analysis, and AI-driven solutions 
-        that solve real-world problems and drive innovation.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services py-5 bg-light" id="services">
-    <div class="container">
-      <h2 class="mb-4 text-center">My Services</h2>
-      <div class="row">
-
-        <div class="col-md-4 text-center">
-          <i class="fas fa-robot fa-3x mb-3"></i>
-          <h3 class="mb-3">Data Science & AI Solutions</h3>
-          <p>Designing and implementing data-driven models and AI systems to deliver predictive and intelligent solutions.</p>
-        </div>
-
-        <div class="col-md-4 text-center">
-          <i class="fas fa-chart-line fa-3x mb-3"></i>
-          <h3 class="mb-3">Data Analysis & Visualization</h3>
-          <p>Extracting insights from data and presenting them in clear, impactful visualizations and reports.</p>
-        </div>
-
-        <div class="col-md-4 text-center">
-          <i class="fas fa-brain fa-3x mb-3"></i>
-          <h3 class="mb-3">Machine Learning Models</h3>
-          <p>Building, training, and deploying machine learning models to automate decision-making and enhance business processes.</p>
-        </div>
-
+  <!-- Projects -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Taxi Trip Prediction</h3>
+        <p>Built a machine learning model to predict trip duration using the Chicago Taxi dataset.</p>
+      </div>
+      <div class="project">
+        <h3>Customer Segmentation</h3>
+        <p>Applied clustering techniques to group customers based on behavior and demographics.</p>
+      </div>
+      <div class="project">
+        <h3>AI Chatbot</h3>
+        <p>Developed an NLP-powered chatbot for handling student inquiries.</p>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section class="skills py-5" id="skills">
-    <div class="container">
-      <h2 class="mb-4 text-center">My Skills</h2>
-      <ul class="list-group list-group-flush text-center">
-        <li class="list-group-item">Python for Data Science</li>
-        <li class="list-group-item">Machine Learning & Deep Learning</li>
-        <li class="list-group-item">Data Analysis & Visualization (Pandas, Matplotlib, Seaborn, Power BI)</li>
-        <li class="list-group-item">SQL & NoSQL Databases</li>
-        <li class="list-group-item">Natural Language Processing (NLP)</li>
-        <li class="list-group-item">API Development for AI Services</li>
-      </ul>
-    </div>
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Let's connect and collaborate!</p>
+    <a href="mailto:your.email@example.com">Email Me</a>
+    <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact py-5 bg-light" id="contact">
-    <div class="container text-center">
-      <h2 class="mb-4">Get In Touch</h2>
-      <p>Let's connect and work on exciting Data Science & AI projects together!</p>
-      <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me</a>
-    </div>
-  </section>
-
-  <footer class="text-center py-3">
-    <p>&copy; 2025 Chebet Miriam | Junior Data Scientist & AI Engineer</p>
+  <footer>
+    <p>© 2025 Chebet Miriam. All Rights Reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
