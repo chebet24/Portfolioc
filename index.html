@@ -6,122 +6,140 @@
   <title>Chebet Miriam | Data Scientist & AI Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+    :root {
+      --primary: #203a43;
+      --secondary: #2c5364;
+      --accent: #ff6b6b;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
     }
-    body {
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+
+    /* Hero Section */
     header {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
-      padding: 80px 20px;
+      padding: 100px 20px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      animation: fadeInDown 1s ease-in-out;
     }
     header h2 {
       font-weight: 300;
-      margin: 10px 0;
+      margin: 15px 0;
+      animation: fadeInUp 1.2s ease-in-out;
     }
     header .btn {
       display: inline-block;
-      margin: 15px 10px;
-      padding: 12px 24px;
-      border-radius: 25px;
-      background: #ff6b6b;
+      margin: 20px 10px;
+      padding: 12px 30px;
+      border-radius: 30px;
+      background: var(--accent);
       color: #fff;
+      font-weight: 500;
       text-decoration: none;
       transition: 0.3s;
+      animation: fadeIn 1.5s ease-in-out;
     }
-    header .btn:hover {
-      background: #ff4757;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+    header .btn:hover { background: #ff4757; }
+
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeIn { from { opacity: 0;} to {opacity:1;} }
+
+    section { padding: 70px 20px; max-width: 1100px; margin: auto; }
     section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 2.5rem;
+      margin-bottom: 25px;
       text-align: center;
-      color: #203a43;
+      color: var(--primary);
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 10px auto 0;
+      border-radius: 2px;
     }
     .about p {
       text-align: center;
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      color: #444;
     }
+
+    /* Skills & Projects */
     .skills, .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
     }
     .skill, .project {
       background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
     }
     .skill:hover, .project:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
-    .skill h3, .project h3 {
-      margin-bottom: 10px;
-      color: #0f2027;
-    }
-    .contact {
-      text-align: center;
-    }
+    .skill h3, .project h3 { margin-bottom: 12px; color: var(--secondary); }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact p { margin-bottom: 20px; font-size: 1.1rem; }
     .contact a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 20px;
-      background: #203a43;
+      padding: 14px 28px;
+      background: var(--primary);
       color: #fff;
-      border-radius: 25px;
+      border-radius: 30px;
       text-decoration: none;
+      font-weight: 500;
       transition: 0.3s;
     }
-    .contact a:hover {
-      background: #2c5364;
-    }
+    .contact a:hover { background: var(--secondary); }
+
     footer {
-      background: #203a43;
+      background: var(--primary);
       color: #fff;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 20px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <header>
     <h1>Chebet Miriam</h1>
     <h2>Junior Data Scientist & AI Engineer</h2>
     <a href="https://github.com/YOUR_GITHUB" target="_blank" class="btn">GitHub</a>
     <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="btn">LinkedIn</a>
+    <a href="Chebet_Miriam_CV.pdf" class="btn">Download CV</a>
   </header>
 
   <!-- About -->
   <section class="about">
     <h2>About Me</h2>
     <p>
-      I am a passionate Junior Data Scientist and AI Engineer with a strong foundation in data analysis, 
-      machine learning, and artificial intelligence. I specialize in turning raw data into meaningful insights 
-      and developing intelligent solutions to solve real-world challenges.
+      I am a passionate Junior Data Scientist and AI Engineer with a strong foundation in 
+      data analysis, machine learning, and artificial intelligence. My mission is to transform 
+      data into actionable insights and develop intelligent systems that create real-world impact.
     </p>
   </section>
 
@@ -131,23 +149,23 @@
     <div class="skills">
       <div class="skill">
         <h3>Python & Data Science</h3>
-        <p>Pandas, NumPy, Scikit-learn for data analysis and ML.</p>
+        <p>Data wrangling, analysis, and ML using Pandas, NumPy, and Scikit-learn.</p>
       </div>
       <div class="skill">
         <h3>Machine Learning</h3>
-        <p>Model building, evaluation, and deployment for predictive solutions.</p>
+        <p>Regression, classification, clustering, and deep learning models.</p>
       </div>
       <div class="skill">
         <h3>Data Visualization</h3>
-        <p>Matplotlib, Seaborn, Power BI for impactful storytelling with data.</p>
+        <p>Seaborn, Matplotlib, Power BI for clear and impactful insights.</p>
       </div>
       <div class="skill">
         <h3>Databases</h3>
-        <p>SQL & NoSQL databases for structured and unstructured data.</p>
+        <p>SQL & NoSQL for efficient data storage and retrieval.</p>
       </div>
       <div class="skill">
         <h3>AI Applications</h3>
-        <p>NLP, computer vision, and API integration for AI-driven systems.</p>
+        <p>NLP, computer vision, and deploying AI models via APIs.</p>
       </div>
     </div>
   </section>
@@ -157,16 +175,16 @@
     <h2>Projects</h2>
     <div class="projects">
       <div class="project">
-        <h3>Taxi Trip Prediction</h3>
-        <p>Built a machine learning model to predict trip duration using the Chicago Taxi dataset.</p>
+        <h3>Chicago Taxi Trip Prediction</h3>
+        <p>Developed a predictive ML model for trip durations using Chicago’s taxi dataset on BigQuery.</p>
       </div>
       <div class="project">
         <h3>Customer Segmentation</h3>
-        <p>Applied clustering techniques to group customers based on behavior and demographics.</p>
+        <p>Implemented clustering algorithms to group customers based on purchasing behavior.</p>
       </div>
       <div class="project">
         <h3>AI Chatbot</h3>
-        <p>Developed an NLP-powered chatbot for handling student inquiries.</p>
+        <p>Built an NLP-based chatbot to support student Q&A and personal guidance.</p>
       </div>
     </div>
   </section>
@@ -174,14 +192,14 @@
   <!-- Contact -->
   <section class="contact">
     <h2>Contact</h2>
-    <p>Let's connect and collaborate!</p>
+    <p>Let’s collaborate on data and AI projects!</p>
     <a href="mailto:your.email@example.com">Email Me</a>
     <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
     <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
   </section>
 
   <footer>
-    <p>© 2025 Chebet Miriam. All Rights Reserved.</p>
+    <p>© 2025 Chebet Miriam | Junior Data Scientist & AI Engineer</p>
   </footer>
 
 </body>
